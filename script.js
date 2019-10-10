@@ -1,18 +1,21 @@
-
 // Random character arrays //
-var specialOptions = [" ", "!", "#", "$", "%", "&", "()", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=","?", "@", "[", "^", "_", "`", "{", "|", "}", "~"];
+var specialOptions = ["!", "#", "$", "%", "&", "()", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=","?", "@", "[", "^", "_", "`", "{", "|", "}", "~"];
 var numberOptions = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 var lowerOptions = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var upperOptions = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+var allOptions = [" ", "!", "#", "$", "%", "&", "()", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=","?", "@", "[", "^", "_", "`", "{", "|", "}", "~", 
+1, 2, 3, 4, 5, 6, 7, 8, 9, "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z",
+"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 
 // Initial user input prompt, determining password length //
-var userInput = prompt("How many characters would you like your password to contain?");
+var userLength = prompt("How many characters would you like your password to contain?");
 
-if (userInput < 8 || userInput > 128) {
+if (userLength < 8 || userLength > 128) {
     alert("Password must be between 8 and 128 characters");
-} 
+}
 
-// Confirming use of each character type in password and generating random character result //
+// Confirming use of each character type in password // 
+// Generating random character for each type //
 var confirmSpecial = confirm("Click OK to confirm including special characters");
     
 if (confirmSpecial) {
@@ -36,3 +39,22 @@ var confirmUpper = confirm("Click OK to confirm including uppercase characters")
 if (confirmUpper) {
     var randUpper = upperOptions[Math.floor(Math.random() * upperOptions.length)];
 }
+
+
+if ((confirmSpecial === true) && (confirmNumber === true) && (confirmLower === true) && (confirmUpper === true)){
+    console.log(randSpecial + randNumber + randLower + randUpper);
+}
+
+var passPartOne = randSpecial + randNumber + randLower + randUpper;
+var passRemain = userLength - 4;
+console.log(passRemain);
+
+var passPartTwo = "";
+for (var i = 0; i <= passRemain; i ++){
+   passPartTwo += allOptions[Math.floor(Math.random() * allOptions.length)];
+}
+
+var randomPassword = passPartOne + passPartTwo;
+console.log(randomPassword);
+
+
