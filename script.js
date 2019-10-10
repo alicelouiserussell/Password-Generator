@@ -12,6 +12,7 @@ var userLength = prompt("How many characters would you like your password to con
 
 if (userLength < 8 || userLength > 128) {
     alert("Password must be between 8 and 128 characters");
+    prompt("How many characters would you like your password to contain?");
 }
 
 // Confirming use of each character type in password // 
@@ -50,11 +51,15 @@ var passRemain = userLength - 4;
 console.log(passRemain);
 
 var passPartTwo = "";
-for (var i = 0; i <= passRemain; i ++){
+for (var i = 0; i <= passRemain; i++){
    passPartTwo += allOptions[Math.floor(Math.random() * allOptions.length)];
 }
 
 var randomPassword = passPartOne + passPartTwo;
 console.log(randomPassword);
 
+var password = document.getElementById("password");
+
+password.textContent = randomPassword;
+password.appendChild(randomPassword);
 
