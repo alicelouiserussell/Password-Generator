@@ -13,13 +13,13 @@ Running in the browser, and featuring HTML, CSS, and JavaScript, this applicatio
 
 **Buttons on the page:**
 
-    1. **Generate:**
+    1. Generate:
 
         * when clicked, starts a function that prompts the user to confirm character use in their password
         * using criteria input from user, random password is generated and displayed in textarea
         * background color of button becomes dark red when user hovers
 
-    2. **Copy to Clipboard:**
+    2. Copy to Clipboard:
 
         * when clicked, password in textarea is copied to user's clipboard
         * user is alerted that password has been copied
