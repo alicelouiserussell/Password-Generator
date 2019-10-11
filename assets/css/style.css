@@ -6,24 +6,34 @@ body {
 
 header {
     text-align: center; 
+    margin: 20px;
+}
+
+h1 {
+    color: #cc0000;
+    font-weight: bold;
+    font-size: 50px;
 }
 
 .main-container {
     background-color: white;
-    max-width: 600px;
-    height: 300px;
+    max-width: 500px;
+    height: 150px;
     margin: 0 auto;
     padding: 30px;
 }
 
 h2 {
+    font-size: 30px;
     margin-top: 0px;
-    margin-bottom: 5px;
-    padding-bottom: 5px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
     border-bottom: 2px solid whitesmoke;
 }
 
 textarea {
+    margin-bottom: 10px;
+    height: 40px;
     width: 100%;
     border-style: dashed;
     border-color: lightgray;
@@ -32,10 +42,11 @@ textarea {
 
 .button-area {
     border-top: 2px solid whitesmoke;
-    padding: 5px;
+    padding: 10px;
 }
 
 #generate {
+    font-size: 18px;
     float: left; 
     background-color: #cc0000;
     color: white;
@@ -44,11 +55,20 @@ textarea {
 
 }
 
+#generate:hover {
+    background-color: darkred;
+}
+
 #copy {
+    font-size: 18px;
     float: right;
     background-color: silver;
     color: white;
     border-radius: 8px;
     padding: 10px;
 
+}
+
+#copy:hover {
+    background-color: darkgray;
 }
